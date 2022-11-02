@@ -1,0 +1,35 @@
+package Kodlama.io.Devs.dataAccess.concretes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import Kodlama.io.Devs.dataAccess.abstracts.ProgrammingLanguageRepository;
+import Kodlama.io.Devs.entities.concretes.ProgrammingLanguage;
+
+public class InMemoryProgrammingLanguageRepository implements ProgrammingLanguageRepository  {
+
+	
+	
+	List<ProgrammingLanguage> programmingLanguages;
+	
+	
+	
+	
+	public InMemoryProgrammingLanguageRepository() {
+		programmingLanguages = new ArrayList<ProgrammingLanguage>();
+		programmingLanguages.add(new ProgrammingLanguage("C#", 1));
+		programmingLanguages.add(new ProgrammingLanguage("Java", 2));
+		programmingLanguages.add(new ProgrammingLanguage("Python", 3));
+		
+	}
+
+
+
+
+	@Override
+	public List<ProgrammingLanguage> getAll() {
+		
+		return null;
+	}
+
+}
